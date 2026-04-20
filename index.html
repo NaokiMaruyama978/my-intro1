@@ -16,6 +16,13 @@
     <header>
         <nav>
             <div class="logo">Maru.<span>dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#profile">About</a></li>
+                <li><a href="#ai">AI</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#terminal">Terminal</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -78,17 +85,105 @@
         <!-- Vision Section -->
         <section id="vision" class="section reveal">
             <div class="container">
-                <div class="vision-card glass neon-border">
-                    <h2 class="section-title">My Challenge</h2>
-                    <p class="vision-text">
-                        この授業を通して、<br>
-                        <span class="highlight">「TikTokのようなアプリ」</span><br>
-                        を作りたいです。
-                    </p>
-                    <div class="vision-tags">
-                        <span>#AppDev</span>
-                        <span>#TikTokClone</span>
-                        <span>#NextGen</span>
+                <h2 class="section-title">Goals & Vision</h2>
+                <div class="grid">
+                    <div class="vision-card glass neon-border">
+                        <p class="vision-text">
+                            この授業を通して、<br>
+                            <span class="highlight">「TikTokのようなアプリ」</span><br>
+                            を作りたいです。
+                        </p>
+                        <div class="vision-tags">
+                            <span>#AppDev</span>
+                            <span>#TikTokClone</span>
+                        </div>
+                    </div>
+                    <div class="vision-card glass neon-border">
+                        <p class="vision-text">
+                            <span class="highlight">「自動化」</span>を用いて<br>
+                            日常のタスクを<br>
+                            もっと楽にしたいです。
+                        </p>
+                        <div class="vision-tags">
+                            <span>#Automation</span>
+                            <span>#Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Terminal Section -->
+        <section id="terminal" class="section reveal">
+            <div class="container">
+                <h2 class="section-title">Command Center</h2>
+                <div class="terminal-container glass neon-border">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">maru@dev:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-history" id="commandHistory">
+                            <p class="system-msg">Welcome to Maru's Terminal. Type a command to change the site's theme.</p>
+                        </div>
+                        <div class="input-line">
+                            <span class="prompt">$</span>
+                            <input type="text" id="terminalInput" placeholder="try 'color cyan' or 'theme sunset'..." autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="terminal-help">
+                        <h3>Available Commands</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>color [value]</code></td>
+                                        <td>アクセントカラーを変更</td>
+                                        <td><code>color #00ff00</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>theme [name]</code></td>
+                                        <td>プリセットテーマを適用</td>
+                                        <td><code>theme sunset</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>reset</code></td>
+                                        <td>初期設定に戻す</td>
+                                        <td><code>reset</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="color-palette-section">
+                            <button id="toggleColors" class="btn-sm">Show Color Codes</button>
+                            <div id="colorTableContainer" class="color-table-wrapper hidden">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Color Name</th>
+                                            <th>Hex Code</th>
+                                            <th>Sample</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Electric Blue</td><td><code>#00d2ff</code></td><td><div class="color-sample" style="background: #00d2ff;"></div></td></tr>
+                                        <tr><td>Neon Pink</td><td><code>#ff007f</code></td><td><div class="color-sample" style="background: #ff007f;"></div></td></tr>
+                                        <tr><td>Cyber Lime</td><td><code>#00ff00</code></td><td><div class="color-sample" style="background: #00ff00;"></div></td></tr>
+                                        <tr><td>Hot Pink</td><td><code>#ff69b4</code></td><td><div class="color-sample" style="background: #ff69b4;"></div></td></tr>
+                                        <tr><td>Gold</td><td><code>#ffd700</code></td><td><div class="color-sample" style="background: #ffd700;"></div></td></tr>
+                                        <tr><td>Deep Purple</td><td><code>#8000ff</code></td><td><div class="color-sample" style="background: #8000ff;"></div></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

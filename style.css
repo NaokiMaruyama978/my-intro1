@@ -58,8 +58,37 @@ header {
 
 header nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* スマホでは一旦非表示（または別の対応） */
+    }
 }
 
 .logo {
@@ -236,9 +265,9 @@ h1 {
 }
 
 .vision-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .highlight {
@@ -328,6 +357,174 @@ h1 {
     .ai-box p { font-size: 1.5rem; }
     .vision-text { font-size: 1.8rem; }
     .section { padding: 6rem 0; }
+}
+
+/* Terminal Section */
+.terminal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.terminal-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-body {
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 200px;
+}
+
+.command-history {
+    margin-bottom: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.system-msg {
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.user-cmd {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.error-msg {
+    color: #ff5f56;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt {
+    color: var(--neon-pink);
+    font-weight: bold;
+}
+
+#terminalInput {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    flex: 1;
+    outline: none;
+}
+
+.terminal-help {
+    padding: 20px;
+    border-top: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.terminal-help h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+th {
+    color: var(--accent-color);
+}
+
+.color-palette-section {
+    margin-top: 20px;
+}
+
+.btn-sm {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-sm:hover {
+    background: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.color-table-wrapper {
+    margin-top: 15px;
+    overflow: hidden;
+    max-height: 500px;
+    transition: all 0.5s ease;
+}
+
+.color-table-wrapper.hidden {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.color-sample {
+    width: 40px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--neon-pink);
+}
+
+/* Transitions for dynamic color changes */
+body, .glass, .neon-border, .accent-color, h1, h2, h3, p, span, .card-icon {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 footer {
